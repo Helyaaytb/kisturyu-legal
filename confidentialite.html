@@ -1,0 +1,131 @@
+from pathlib import Path
+
+html = """<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité du bot Discord Esprit du Kisturyu.">
+  <meta name="theme-color" content="#21172e">
+  <title>Politique de confidentialité | Esprit du Kisturyu</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #15111d;
+      --panel: #211a2c;
+      --text: #f8f2fb;
+      --muted: #d0c2da;
+      --pink: #f4b6d2;
+      --violet: #c3a6e8;
+      --line: #493654;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: radial-gradient(ellipse at top, #352342 0%, var(--bg) 58%);
+      color: var(--text);
+      font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: clamp(22px, 5vw, 48px);
+      background: rgba(33, 26, 44, .96);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.28);
+    }
+    .eyebrow {
+      color: var(--pink);
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1 { line-height: 1.2; font-size: clamp(2rem, 5vw, 3rem); margin: 10px 0; }
+    h2 { color: var(--violet); margin-top: 32px; font-size: 1.3rem; }
+    p, li { color: var(--muted); }
+    a { color: var(--pink); }
+    .notice {
+      border-left: 4px solid var(--pink);
+      background: #2b2037;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .date { color: #b9a8c5; font-size: .92rem; }
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: #b9a8c5;
+      font-size: .9rem;
+    }
+    code { color: var(--pink); overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">🐉 Communauté du Kisturyu</div>
+    <h1>Politique de confidentialité</h1>
+    <p><strong>Bot Discord : Esprit du Kisturyu</strong></p>
+    <p class="date">Dernière mise à jour : 16 octobre 2026</p>
+
+    <div class="notice">
+      Cette page est un modèle à personnaliser avant publication. Les sections doivent décrire les pratiques réelles du bot. Supprime les fonctionnalités et données qui ne sont pas utilisées et complète les informations entre crochets.
+    </div>
+
+    <h2>1. Qui est responsable ?</h2>
+    <p>Le responsable du traitement des données est : <strong>[nom ou entité responsable]</strong>. Pour toute question liée à cette politique, vous pouvez nous contacter à : <strong>[adresse e-mail de contact]</strong>.</p>
+
+    <h2>2. Quelles informations peuvent être traitées ?</h2>
+    <p>Selon les fonctionnalités réellement activées et la configuration du bot, les informations suivantes peuvent être traitées :</p>
+    <ul>
+      <li>identifiants Discord de l’utilisateur, du serveur ou des salons, nécessaires à l’exécution des commandes ;</li>
+      <li>nom d’utilisateur ou informations de profil accessibles au bot, lorsque cela est nécessaire ;</li>
+      <li>commandes envoyées au bot et paramètres associés ;</li>
+      <li>données de rôles, d’accueil, d’événements ou de modération, si ces fonctions sont activées ;</li>
+      <li>journaux techniques et erreurs utiles à la sécurité et au dépannage, si ces journaux sont conservés.</li>
+    </ul>
+    <p>Le bot ne doit traiter que les informations nécessaires à ses fonctions. Décrivez ici précisément ce qui est collecté et enregistré, notamment si les messages sont stockés ou non.</p>
+
+    <h2>3. Pourquoi ces informations sont-elles utilisées ?</h2>
+    <p>Les données peuvent être utilisées, lorsque les fonctions correspondantes sont activées, pour exécuter les commandes, gérer les rôles, accueillir les membres, assurer la modération, organiser les événements, sécuriser le service et corriger les erreurs. Les finalités exactes doivent correspondre au fonctionnement réel du bot.</p>
+
+    <h2>4. Base légale</h2>
+    <p>Pour chaque traitement, le responsable doit déterminer et indiquer la base légale applicable, par exemple l’exécution d’une fonctionnalité demandée, un intérêt légitime dûment évalué ou le consentement lorsque celui-ci est requis. À compléter selon les usages réels.</p>
+
+    <h2>5. Durée de conservation</h2>
+    <p>Les données ne doivent être conservées que pendant la durée nécessaire aux finalités annoncées. Indiquez les durées réelles pour chaque catégorie de données, notamment les journaux de modération, les données de rôles et les journaux techniques : <strong>[durées de conservation à préciser]</strong>.</p>
+
+    <h2>6. Accès et partage</h2>
+    <p>L’accès aux données doit être limité aux personnes qui en ont besoin pour administrer ou maintenir le bot. Si des hébergeurs, bases de données ou services tiers sont utilisés, indiquez leur rôle et les éventuels transferts de données. Ne publiez pas de promesse de non-partage qui ne correspondrait pas à vos pratiques réelles.</p>
+
+    <h2>7. Sécurité</h2>
+    <p>Des mesures raisonnables doivent être mises en place pour protéger les données et les accès. Le jeton du bot doit rester secret, ne jamais être publié dans le code public et être renouvelé immédiatement s’il est exposé. Aucune mesure ne peut toutefois garantir une sécurité absolue.</p>
+
+    <h2>8. Vos droits et vos demandes</h2>
+    <p>Selon la législation applicable, vous pouvez disposer de droits d’accès, de rectification, d’effacement, de limitation ou d’opposition, ainsi que d’autres droits prévus par la loi. Pour poser une question ou exercer un droit, contactez : <strong>[adresse e-mail de contact]</strong>. Vous pouvez également déposer une réclamation auprès de l’autorité de protection des données compétente, notamment la CNIL en France, si elle est applicable.</p>
+
+    <h2>9. Mineurs</h2>
+    <p>Les utilisateurs doivent respecter les conditions d’âge et les règles de Discord. Si le bot est utilisé par des mineurs, ses fonctionnalités et ses pratiques de traitement doivent être adaptées aux règles applicables à leur situation.</p>
+
+    <h2>10. Services tiers et règles de Discord</h2>
+    <p>L’utilisation du bot implique également l’utilisation de Discord, qui applique ses propres conditions et sa propre politique de confidentialité. Consultez les <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Conditions d’utilisation de Discord</a> et la <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Discord</a>.</p>
+
+    <h2>11. Modifications de cette politique</h2>
+    <p>Cette politique peut être mise à jour si les fonctionnalités du bot ou les pratiques de traitement évoluent. La date de mise à jour figurera en haut de cette page.</p>
+
+    <footer>
+      <p><strong>Esprit du Kisturyu</strong> · Communauté de Helyaa</p>
+      <p>Avant publication, remplacez tous les champs entre crochets et vérifiez que ce document décrit fidèlement les données réellement traitées, les durées de conservation et les services utilisés.</p>
+    </footer>
+  </main>
+</body>
+</html>
+"""
+
+path = Path("/mnt/data/index.html")
+path.write_text(html, encoding="utf-8")
+print(f"Fichier créé : {path} ({path.stat().st_size} octets)")
